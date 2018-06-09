@@ -19,3 +19,13 @@ Ruby version 2.4.4
 Rails version 5.2.0
 Redis version 3.2.100
 
+Run with:
+```
+bin/rails server
+```
+on Windows with:
+```
+ruby bin\rails server
+```
+
+Now open your browser at: http://localhost:3000
