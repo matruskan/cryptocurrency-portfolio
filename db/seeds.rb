@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Coin.create([
+    {symbol: 'BTC', coinName: 'Bitcoin'},
+    {symbol: 'ETH', coinName: 'Ethereum'},
+    {symbol: 'DASH', coinName: 'DigitalCash'},
+    {symbol: 'ZEC', coinName: 'ZCash'},
+    {symbol: 'XMR', coinName: 'Monero'},
+    {symbol: 'LTC', coinName: 'Litecoin'}])
