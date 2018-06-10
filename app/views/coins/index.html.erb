@@ -1,2 +1,17 @@
-<h1>Coins#index</h1>
-<p>Find me in app/views/coins/index.html.erb</p>
+<h1>Coins</h1>
+
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Coin Name</th>
+    <th>Price</th>
+  </tr>
+
+  <% @coins.each do |coin| %>
+    <tr>
+      <td><%= coin.symbol %></td>
+      <td><%= coin.coinName %></td>
+      <td><%= coin.price %></td>
+    </tr>
+  <% end %>
+</table>
