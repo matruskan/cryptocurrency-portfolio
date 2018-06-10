@@ -19,6 +19,11 @@ Ruby version 2.4.4
 Rails version 5.2.0
 Redis version 3.2.100
 
+Install rest_client:
+```
+gem install rest-client
+```
+
 Run with:
 ```
 bin/rails server
