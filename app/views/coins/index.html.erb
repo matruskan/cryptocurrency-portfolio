@@ -5,6 +5,7 @@
     <th>Symbol</th>
     <th>Coin Name</th>
     <th>Price</th>
+    <th></th>
   </tr>
 
   <% @coins.each do |coin| %>
@@ -12,6 +13,7 @@
       <td><%= coin.symbol %></td>
       <td><%= coin.coinName %></td>
       <td><%= coin.price %></td>
+      <td><%= link_to 'link', coin_path(coin) %></td>
     </tr>
   <% end %>
 </table>
