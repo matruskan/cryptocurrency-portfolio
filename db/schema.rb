@@ -20,4 +20,13 @@ ActiveRecord::Schema.define(version: 2018_06_09_213355) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "purchase_orders", force: :cascade do |t|
+    t.integer "coin_id"
+    t.decimal "quantity"
+    t.decimal "pricePaid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coin_id"], name: "index_purchase_orders_on_coin_id"
+  end
+
 end

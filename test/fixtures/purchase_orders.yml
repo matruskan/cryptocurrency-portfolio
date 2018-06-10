@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coin: one
+  quantity: 9.99
+  pricePaid: 9.99
+
+two:
+  coin: two
+  quantity: 9.99
+  pricePaid: 9.99

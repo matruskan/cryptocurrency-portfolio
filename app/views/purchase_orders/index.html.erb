@@ -1,0 +1,22 @@
+<h1>Purchase Orders</h1>
+<%= link_to 'Coins', coins_path %>
+<table>
+  <tr>
+    <th>Order #</th>
+    <th>Symbol</th>
+    <th>Coin Name</th>
+    <th>Quantity</th>
+    <th>Price paid</th>
+    <th>Price now</th>
+  </tr>
+ 
+  <% @purchaseOrders.each do |purchaseOrder| %>
+    <tr>
+      <td><%= purchaseOrder.id %></td>
+      <td><%= purchaseOrder.coin.symbol %></td>
+      <td><%= purchaseOrder.coin.coinName %></td>
+      <td><%= purchaseOrder.quantity %></td>
+      <td><%= purchaseOrder.pricePaid %></td>
+    </tr>
+  <% end %>
+</table>
