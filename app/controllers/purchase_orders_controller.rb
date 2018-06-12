@@ -1,7 +1,11 @@
 class PurchaseOrdersController < ApplicationController
     def index
         @purchaseOrders = PurchaseOrder.all
+        @purchaseOrders.each do |purchaseOrder|
+            purchaseOrder.priceNow = purchaseOrder.quantity * CoinsController.fetch_price(purchaseOrder.coin.symbol)
+        end
     end
+
     def new
         @purchaseOrder = PurchaseOrder.new
         @purchaseOrder.quantity = 1
@@ -19,5 +23,10 @@ class PurchaseOrdersController < ApplicationController
         @purchaseOrder.pricePaid = @purchaseOrder.coin.price * @purchaseOrder.quantity
         @purchaseOrder.save
         redirect_to @purchaseOrder
+    end
+
+    def show
+        @purchaseOrder = PurchaseOrder.find(params[:id])
+        @purchaseOrder.priceNow = @purchaseOrder.quantity * CoinsController.fetch_price(@purchaseOrder.coin.symbol)
     end
 end

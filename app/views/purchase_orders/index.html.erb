@@ -8,6 +8,7 @@
     <th>Quantity</th>
     <th>Price paid</th>
     <th>Price now</th>
+    <th>Link</th>
   </tr>
  
   <% @purchaseOrders.each do |purchaseOrder| %>
@@ -17,6 +18,8 @@
       <td><%= purchaseOrder.coin.coinName %></td>
       <td><%= purchaseOrder.quantity %></td>
       <td><%= purchaseOrder.pricePaid %></td>
+      <td><%= purchaseOrder.priceNow %></td>
+      <td><%= link_to 'Link', purchase_order_path(purchaseOrder) %></td>
     </tr>
   <% end %>
 </table>
