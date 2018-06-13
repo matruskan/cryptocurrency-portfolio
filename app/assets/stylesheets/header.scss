@@ -1,0 +1,32 @@
+header {
+    display: block;
+    background: #eee;
+    box-shadow: 0 0 5px #aaa;
+    & > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .app-title {
+        color: #228844;
+        font-weight: bold;
+        padding: 1em 2em 1em 1em;
+    }
+    ul.menu li {
+        display: inline-block;
+        a {
+            border-bottom: 2px solid transparent;
+            border-top: 2px solid transparent;
+            color: #555;
+            display: inline-block;
+            padding: 1em 1.2em;
+            text-decoration: none;
+            &:hover {
+                color: #000;
+                background: #fff;
+            }
+            &.nav-active {
+                border-bottom: 2px solid #228844;
+            }
+        }
+    }
+}
