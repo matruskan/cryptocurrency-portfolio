@@ -6,7 +6,7 @@
 <%= form_with scope: :purchaseOrder, url: purchase_orders_path, local: true do |form| %>
   <p>
     <%= form.label :quantity %><br>
-    <%= form.number_field :quantity, in: 0.0..100.0, step: 0.01, id: 'quantity-field', :onchange => 'updatePrice()' %>
+    <%= form.number_field :quantity, in: 0.0..100.0, step: 0.01, id: 'quantity-field', :oninput => 'updatePrice()' %>
     <%= fields_for :coin do |coin_form| %>
       <%= coin_form.hidden_field :id %>
     <% end %>
