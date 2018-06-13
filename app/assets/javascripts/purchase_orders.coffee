@@ -3,7 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 @updatePrice = ->
-    quantity = parseFloat(document.getElementById('quantity-field').value)
+    quantityValue = document.getElementById('quantity-field').value;
+    quantity = quantityValue ? 0.0 : parseFloat(quantityValue)
     price = parseFloat(document.getElementById('price').innerHTML)
     document.getElementById('quantity').innerHTML = quantity
     document.getElementById('total').innerHTML = (quantity*price)
