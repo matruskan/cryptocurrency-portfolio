@@ -34,3 +34,17 @@ ruby bin\rails server
 ```
 
 Now open your browser at: http://localhost:3000
+
+## Screenshots
+
+Coin list:
+![Coins list](doc/images/coins.png)
+
+Buy:
+![Buy page](doc/images/buy.png)
+
+Purchase order:
+![Purchase order](doc/images/purchase_order.png)
+
+Purchase orders:
+![Purchase orders list](doc/images/purchase_orders.png)
