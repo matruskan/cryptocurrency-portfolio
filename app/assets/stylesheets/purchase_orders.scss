@@ -1,3 +1,35 @@
 // Place all the styles related to the PurchaseOrder controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table#buy {
+    tr {
+        & > * {
+            background: none;
+            border: none;
+        }
+        th {
+            text-align: left;
+        }
+        td {
+            input[type=submit] {
+                background: #228844;
+                border: none;
+                border-radius: 2px;
+                color: #eee;
+                font-weight: bold;
+                width: 100%;
+                &:hover {
+                    background: #19a447;
+                    color: white;
+                }
+            }
+        }
+        &.total {
+            border-top: 2px solid #ccc;
+            color: #228844;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: right;
+        }
+    }
+}

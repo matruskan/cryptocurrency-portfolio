@@ -6,5 +6,4 @@
     quantityValue = document.getElementById('quantity-field').value;
     quantity = quantityValue ? 0.0 : parseFloat(quantityValue)
     price = parseFloat(document.getElementById('price').innerHTML)
-    document.getElementById('quantity').innerHTML = quantity
     document.getElementById('total').innerHTML = (quantity*price)
