@@ -1,0 +1,25 @@
+.content {
+    display: block;
+    padding: 1em 1em;
+    h1 {
+        font-weight: normal;
+        padding: 0 0 0.5em;
+    }
+    input {
+        padding: 0.6em 0.8em;
+    }
+    table {
+        border-collapse: collapse;
+        tr {
+            & > * {
+                padding: 0.8em 1.2em;
+            }
+            th {
+                background: #eee;
+            }
+            td {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}
