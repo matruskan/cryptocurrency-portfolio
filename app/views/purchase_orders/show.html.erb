@@ -1,25 +1,26 @@
-<h1>Purchase Order: <%= @purchaseOrder.id %></h1>
-<p>
-    Order #<br>
-    <%= @purchaseOrder.id %>
-</p>
-<p>
-    Symbol<br>
-    <%= @purchaseOrder.coin.symbol %>
-</p>
-<p>
-    Coin Name<br>
-    <%= @purchaseOrder.coin.coinName %>
-</p>
-<p>
-    Quantity<br>
-    <%= @purchaseOrder.quantity %>
-</p>
-<p>
-    Price paid<br>
-    <%= @purchaseOrder.pricePaid %>
-</p>
-<p>
-    Price now<br>
-    <%= @purchaseOrder.priceNow %>
-</p>
+<h1>Purchase Order # <%= @purchaseOrder.id %></h1>
+<span class="purchase-order">
+  <span class="coin">
+      <span title="Coin Name">
+        <%= @purchaseOrder.coin.coinName %>
+      </span>
+      <span title="Symbol">
+        (<%= @purchaseOrder.coin.symbol %>)
+      </span>
+  </span>
+  <span class="quantity" title="Quantity">
+      x
+      <%= @purchaseOrder.quantity %>
+  </span>
+  <span class="price">
+    <span class="paid">
+        <span class="label">Price paid</span>
+        <span class="value">$ <%= @purchaseOrder.pricePaid %></span>
+    </span>
+    <span class="current">
+        <span class="label">Current price</span>
+        <span class="value <%= (@purchaseOrder.pricePaid > @purchaseOrder.priceNow)? 'lose' : 'win'  %>">$ <%= @purchaseOrder.priceNow %></span>
+    </span>
+  </span>
+  <%= link_to 'Buy more', new_purchase_order_path(:coin_id => @purchaseOrder.coin.id) %>
+</span>

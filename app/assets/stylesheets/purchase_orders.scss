@@ -33,3 +33,44 @@ table#buy {
         }
     }
 }
+.purchase-order {
+    & > span {
+        display: inline-block;
+    }
+    .coin {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    .price {
+        display: block;
+        & > span {
+            border: 1px solid #ccc;
+            display: inline-block;
+            margin: 1em 1em 1em 0;
+            padding: 1em;
+            text-align: center;
+            & > span {
+                display: block;
+            }
+            .label {
+                font-size: 0.8em;
+                color:#444;
+            }
+            .value {
+                font-weight: bold;
+            }
+        }
+    }
+}
+.lose {
+    color:#bb2244;
+    &:before {
+        content:'⇩ ';
+    }
+}
+.win {
+    color: #228844;
+    &:before {
+        content:'⇧ ';
+    }
+}
