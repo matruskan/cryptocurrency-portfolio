@@ -48,3 +48,11 @@ Purchase order:
 
 My Portfolio:
 ![Purchase orders list](doc/images/my_portfolio.png)
+
+## Things to do
+
+ - Fetching the coins price from the webservice in a background task, so it doesn't take time from the user request.
+
+ - Adding [authentication](http://guides.rubyonrails.org/getting_started.html#basic-authentication) or adding this project to another bigger one, which already has a [user management](http://guides.rubyonrails.org/security.html#user-management). Then, each Purchase Order must belong to a user.
+
+ - Adding some kind of a management area for the coins, so the admin could select some coins to show and sell, and to see some stats about users, like how much dolars they've spent, or how many coins they have.
