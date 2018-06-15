@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2018_06_09_213355) do
   create_table "coins", force: :cascade do |t|
     t.string "symbol"
     t.string "coinName"
-    t.decimal "price"
+    t.string "imageUrl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

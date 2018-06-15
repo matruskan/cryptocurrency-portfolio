@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Coin.create([
-    {symbol: 'BTC', coinName: 'Bitcoin'},
-    {symbol: 'ETH', coinName: 'Ethereum'},
-    {symbol: 'DASH', coinName: 'DigitalCash'},
-    {symbol: 'ZEC', coinName: 'ZCash'},
-    {symbol: 'XMR', coinName: 'Monero'},
-    {symbol: 'LTC', coinName: 'Litecoin'}])
+    {symbol: 'BTC', coinName: 'Bitcoin', imageUrl: '/media/19633/btc.png'},
+    {symbol: 'ETH', coinName: 'Ethereum', imageUrl: '/media/20646/eth_logo.png'},
+    {symbol: 'DASH', coinName: 'DigitalCash', imageUrl: '/media/20626/imageedit_27_4355944719.png'},
+    {symbol: 'ZEC', coinName: 'ZCash', imageUrl: '/media/351360/zec.png'},
+    {symbol: 'XMR', coinName: 'Monero', imageUrl: '/media/19969/xmr.png'},
+    {symbol: 'LTC', coinName: 'Litecoin', imageUrl: '/media/19782/litecoin-logo.png'}])

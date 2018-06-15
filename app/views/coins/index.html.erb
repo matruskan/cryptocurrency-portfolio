@@ -1,6 +1,7 @@
 <h1>Coins</h1>
 <table>
   <tr>
+    <th>Image</th>
     <th>Symbol</th>
     <th>Coin Name</th>
     <th>Price</th>
@@ -10,9 +11,10 @@
 
   <% @coins.each do |coin| %>
     <tr>
+      <td><img src="https://www.cryptocompare.com<%= coin.imageUrl %>"></td>
       <td><%= coin.symbol %></td>
       <td><%= coin.coinName %></td>
-      <td><%= coin.price %></td>
+      <td>$ <%= coin.price %></td>
       <td><%= link_to 'Link', coin_path(coin) %></td>
       <td><%= link_to 'Buy', new_purchase_order_path(:coin_id => coin.id) %></td>
     </tr>

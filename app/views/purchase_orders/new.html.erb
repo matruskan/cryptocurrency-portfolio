@@ -8,7 +8,7 @@
     </tr>
     <tr>
       <td>
-        <%= @purchaseOrder.coin.coinName %> (<%= @purchaseOrder.coin.symbol %>)
+        <img src="https://www.cryptocompare.com<%= @purchaseOrder.coin.imageUrl %>"> <%= @purchaseOrder.coin.coinName %> (<%= @purchaseOrder.coin.symbol %>)
       </td>
       <td>
         $ <span id="price"><%= @purchaseOrder.coin.price %></span>
