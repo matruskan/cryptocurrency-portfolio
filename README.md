@@ -46,5 +46,5 @@ Buy:
 Purchase order:
 ![Purchase order](doc/images/purchase_order.png)
 
-Purchase orders:
-![Purchase orders list](doc/images/purchase_orders.png)
+My Portfolio:
+![Purchase orders list](doc/images/my_portfolio.png)
