@@ -7,9 +7,8 @@ class PurchaseOrdersController < ApplicationController
     end
 
     def new
-        @purchaseOrder = PurchaseOrder.new
-        @purchaseOrder.quantity = 1
-        @purchaseOrder.coin = Coin.find(params[:coin_id])
+        @purchaseOrder = PurchaseOrder.new quantity: 1,
+                                           coin: Coin.find(params[:coin_id])
         @purchaseOrder.coin.price = CoinsController.fetch_price(@purchaseOrder.coin.symbol)
         @coin = @purchaseOrder.coin
     end
