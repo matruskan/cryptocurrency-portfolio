@@ -24,6 +24,9 @@
       </nav>
     </header>
     <span class="content">
+      <% if flash[:alert] %>
+        <span class="error"><%= flash[:alert] %></span>
+      <% end %>
       <%= yield %>
     </span>
   </body>

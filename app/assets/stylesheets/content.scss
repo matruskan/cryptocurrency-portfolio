@@ -22,4 +22,12 @@
             }
         }
     }
+    .error {
+        background: #fda;
+        border-radius: 3px;
+        color: #a52;
+        display: inline-block;
+        margin: 0.5em 0 0.5em;
+        padding: 0.5em 0.8em;
+    }
 }
