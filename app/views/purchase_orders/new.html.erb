@@ -32,5 +32,6 @@
   </table>
   <%= fields_for :coin do |coin_form| %>
     <%= coin_form.hidden_field :id %>
+    <%= coin_form.hidden_field :price %>
   <% end %>
 <% end %>

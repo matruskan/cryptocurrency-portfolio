@@ -15,14 +15,23 @@ class PurchaseOrdersController < ApplicationController
     end
 
     def create
-        #render plain: params[:purchaseOrder].inspect
+        #puts params[:coin].inspect
         @purchaseOrder = PurchaseOrder.new(params.require(:purchaseOrder).permit(:quantity))
-        coin = Coin.new(params.require(:coin).permit(:id))
-        @purchaseOrder.coin = Coin.find(coin.id)
-        @purchaseOrder.coin.price = CoinsController.fetch_price(@purchaseOrder.coin.symbol)
+        coin = Coin.find(params[:coin][:id].to_f);
+        coin.price = params[:coin][:price].to_f
+        @purchaseOrder.coin = coin
         @purchaseOrder.pricePaid = @purchaseOrder.coin.price * @purchaseOrder.quantity
-        @purchaseOrder.save
-        redirect_to @purchaseOrder
+        if @purchaseOrder.save
+            redirect_to @purchaseOrder
+        else
+            if coin.price == 0
+                flash[:alert] = "Unnable to fetch coin price, please try again in a few minutes"
+            else
+                flash[:alert] = "You can't buy it for free ;)"
+            end
+            redirect_to action: "new",
+                        coin_id: @purchaseOrder.coin.id
+        end
     end
 
     def show
