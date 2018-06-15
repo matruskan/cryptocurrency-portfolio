@@ -1,10 +1,14 @@
 class CoinsController < ApplicationController
 
     def self.fetch_price(symbol)
-        cache = ActiveSupport::Cache::MemoryStore.new(expires_in: 10.minute)
-        cache.fetch(symbol) do
-            response = RestClient.get 'https://min-api.cryptocompare.com/data/price', {params: {'fsym' => symbol, 'tsyms' => 'USD'}}
-            JSON.parse(response)['USD']
+        Rails.cache.fetch(symbol, expires_in: 5.minutes) do
+            begin
+                response = RestClient.get 'https://min-api.cryptocompare.com/data/price', {params: {'fsym' => symbol, 'tsyms' => 'USD'}}
+                JSON.parse(response)['USD']
+            rescue => e
+                put = "Unable to fetch coin price"
+                0
+            end
         end
     end
 
