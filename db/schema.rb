@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_06_09_213355) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "coins", force: :cascade do |t|
     t.string "symbol"
     t.string "coinName"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 2018_06_09_213355) do
   end
 
   create_table "purchase_orders", force: :cascade do |t|
-    t.integer "coin_id"
+    t.bigint "coin_id"
     t.decimal "quantity"
     t.decimal "pricePaid"
     t.datetime "created_at", null: false
@@ -29,4 +32,5 @@ ActiveRecord::Schema.define(version: 2018_06_09_213355) do
     t.index ["coin_id"], name: "index_purchase_orders_on_coin_id"
   end
 
+  add_foreign_key "purchase_orders", "coins"
 end
