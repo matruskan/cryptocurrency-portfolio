@@ -75,7 +75,7 @@ GEM
     crass (1.0.4)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-    duktape (2.0.1.0)
+    duktape (1.6.1.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25-x64-mingw32)
@@ -206,7 +206,7 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  duktape
+  duktape (~> 1.6.1.0)
   jbuilder (~> 2.5)
   pg
   puma (~> 3.11)
